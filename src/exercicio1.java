@@ -3,6 +3,16 @@ import com.sun.security.jgss.GSSUtil;
 import java.util.Scanner;
 
 public class exercicio1 {
+
+    public static boolean Primo(int numero){
+        boolean ePrimo = true;
+        for(int n =2 ;n<numero ; n++){
+            if(numero % n == 0){
+                ePrimo = false;
+            }
+        }
+        return ePrimo;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -50,6 +60,28 @@ public class exercicio1 {
 
                     break;
                 case 3:
+                    //numeros primos
+                    boolean   validaNumero  = false;
+                    do{
+
+                        System.out.println("Digite um numero: ");
+                        numero = scanner.nextInt();
+                        if(numero < 0){
+                            System.out.println("O número não pode ser negativo tente novamente");
+
+                        }else{
+                            validaNumero = true;
+                            for(int n=2; n<=numero; n++){
+                                if(Primo(n)){
+                                    System.out.printf("%d ",n);
+
+
+                                }
+
+                            }
+                        }
+
+                    }while (!validaNumero);
                     break;
                 case 4:
                     break;
