@@ -84,8 +84,21 @@ public class exercicio1 {
                     }while (!validaNumero);
                     break;
                 case 4:
+                    System.out.println("Juros compostos");
+                    System.out.println("Digite o valor do investimento: ");
+                    double investimento = scanner.nextDouble();
+                    System.out.println("Digite o período do investimento: ");
+                    int periodo = scanner.nextInt();
+                    System.out.println("Digite a taxa de juros mensal (%): ");
+                    double juros = scanner.nextDouble();
+
+                    for (int i = 1; i <= periodo; i++) {
+                        investimento += investimento * (juros/100);
+                        System.out.printf("mês %d: valor do montante  %.2f \n", i, investimento);
+                    }
                     break;
                 case 5:
+                    System.out.println("Aplicação finalizada com sucesso! :)");
                     break;
 
                 default:
