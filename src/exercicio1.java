@@ -1,3 +1,5 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.Scanner;
 
 public class exercicio1 {
@@ -29,6 +31,23 @@ public class exercicio1 {
                     }
                     break;
                 case 2:
+                   int numero1;
+                    do{
+                        System.out.println("Informe o número: ");
+                        numero1 = scanner.nextInt();
+                        if(numero1 <= 0){
+                            System.out.println("Erro! Número inválido! Tente novamente.");
+                        }else
+                        {
+                            for (int i = 0; i <= numero1; i++){
+                                if(i % 2 == 1){
+                                    System.out.print(i + "\t\n" );
+                                }
+                            }
+
+                        }
+                    }while (numero1 <=0);
+
                     break;
                 case 3:
                     break;
