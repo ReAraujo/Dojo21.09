@@ -12,6 +12,21 @@ public class exercicio1 {
             opcao = scanner.nextInt();
             switch (opcao){
                 case 1:
+                    System.out.println("Cálculo de números pares");
+                    int numero = 0;
+                    do {
+                        System.out.print("Informe um número: ");
+                        numero = scanner.nextInt();
+                        if (numero < 0){
+                            System.out.println("Número informado é inválido.");
+                        }
+                    }while (numero < 0);
+                    System.out.println("Números pares de 0 à " + numero);
+                    for (int i = 0; i <= numero; i++){
+                        if (i % 2 == 0){
+                            System.out.println(i);
+                        }
+                    }
                     break;
                 case 2:
                     break;
